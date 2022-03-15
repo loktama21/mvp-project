@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS todos;
+
+CREATE TABLE todos (
+    id SERIAL PRIMARY KEY NOT NULL,
+    task_name TEXT NOT NULL,
+    task_priority INTEGER NOT NULL
+)
