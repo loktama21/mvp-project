@@ -1,4 +1,26 @@
-* {
+body {
+  background-image: url(back.jpg);
+  background-size: cover;
+}
+
+.user-form{
+  background-color: rgb(224, 198, 49);
+  margin: 100px auto 20px auto;
+  font-weight: bold;
+}
+
+.user-form, .display {
+  width: 50%;
+  padding: 10px;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.display {
+  background-color: whitesmoke;
+  margin: 5px auto;
+}
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,7 +40,7 @@
   width: 100%;
   /* margin: 0 auto; */
   /* overflow: hidden; */
-  background-color: #eaedf0;
+  /* background-color: #eaedf0;
 }
 
 .left-content {
@@ -43,4 +65,4 @@
   height: 10%;
   /* clear: both; */
   background-color: #d6e9fe;
-}
+} */ */

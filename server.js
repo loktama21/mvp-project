@@ -1,13 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
+const db = require("./db/db_configuration");
 
-const { Pool } = require("pg");
+// const { Pool } = require("pg");
 
-const pool = new Pool({
-  database: "todolist",
-});
+// const pool = new Pool({
+//   database: "todolist",
+// });
 
-const PORT = 4000;
+// const PORT = 4000;
 
 app.use(express.json());
 app.use(express.static("public"));
@@ -62,10 +64,26 @@ app.patch("/todos/:id", (req, res) => {
 });
 
 //delete a task
+// app.delete("/todos/:id", (req, res) => {
+//   const id = req.params.id;
+//   pool
+//     .query("DELETE FROM todos WHERE id=$1 RETURNING *;", [id])
+//     .then((result) => {
+//       res.send(result.rows);
+//     })
+//     .catch(() => {
+//       res.sendStatus(503);
+//     });
+// });
+
 app.delete("/todos/:id", (req, res) => {
+  // const { task_name, task_priority } = req.body;
   const id = req.params.id;
   pool
-    .query("DELETE FROM todos WHERE id=$1 RETURNING *;", [id])
+    .query(
+      "DELETE FROM todos WHERE task_name=$1 AND task_priority = $2 RETURNING *;",
+      [task_name, task_priority]
+    )
     .then((result) => {
       res.send(result.rows);
     })
@@ -74,6 +92,6 @@ app.delete("/todos/:id", (req, res) => {
     });
 });
 
-app.listen(PORT, () => {
-  console.log("Listening to port: ", PORT);
+app.listen(process.env.PORT, () => {
+  console.log("Listening to port: ", process.env.PORT);
 });
