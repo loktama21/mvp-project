@@ -1,28 +1,28 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="'en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <title>Exercise Tracker</title>
 </head>
 <body>
-    <div class="container">
-        <div class="header"></div>
-            <div class="page">
-                <div class="left-content">
-                    <div class="user-input">
-                        <input type="text" id="exercise-input" placeholder="Type exercise name">
-                        <!-- <input type="text" id="count-input" placeholder="Type exercise count"> -->
-                        <button id="addToDo">Add</button>
-                        <div class="exercise-list"></div>
-                    </div>
-                    <button>Save</button>
-                </div>
-                <div class="right-content"></div>
-            </div>
-        <div class="footer"></div>
-    </div>
+   <form class="user-form">
+        <label>Task: <input name="task" /></label>
+        <label>Priority: 
+            <!-- <input name="priority" /> -->
+            <select name="priority">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+              </select>
+        </label>
+        <button type="submit">Add</button>
+   </form>
+   <p class="displayTodo">
+       
+   </p>
 </body>
 </html>
