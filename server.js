@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const db = require("./db/db_configuration");
+const db = require("./db/conn");
 
 // const { Pool } = require("pg");
 
