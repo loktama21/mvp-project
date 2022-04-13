@@ -1,10 +1,11 @@
 body {
-  background-image: url(back.jpg);
-  background-size: cover;
+  /* background-image: url(back.jpg);
+  background-size: cover; */
+  background-image: linear-gradient(to left, rgb(218, 65, 27), rgb(222, 237, 13));
 }
 
 .user-form{
-  background-color: rgb(224, 198, 49);
+  background-image: linear-gradient(to right, rgb(218, 65, 27), rgb(222, 237, 13));
   margin: 100px auto 20px auto;
   font-weight: bold;
 }
@@ -16,7 +17,7 @@ body {
 }
 
 .display {
-  background-color: whitesmoke;
+  background-image: linear-gradient(to right, rgb(218, 65, 27), rgb(222, 237, 13));
   margin: 5px auto;
 }
 
