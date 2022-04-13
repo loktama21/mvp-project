@@ -1,5 +1,3 @@
-// const { response } = require("express")
-
 const form = document.querySelector(".user-form")
 const displayToDo = document.querySelector(".display") //display
 
@@ -16,16 +14,17 @@ fetch("/list", {
   })
 
 form.addEventListener("submit", (e) => {
+  document.getElementsById("task").value = null // clear the input field
   e.preventDefault()
   const data = new FormData(e.target)
   const todo = {
     task_name: data.get("task"),
     task_priority: data.get("priority"),
   }
-
   let newTodo = document.createElement("li")
   newTodo.innerHTML = todo.task_name
   displayToDo.appendChild(newTodo)
+  //document.getElementsById("task").value = null // clear the input field
 
   fetch("/todos", {
     method: "post",

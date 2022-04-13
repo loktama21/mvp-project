@@ -1,6 +1,4 @@
 body {
-  /* background-image: url(back.jpg);
-  background-size: cover; */
   background-image: linear-gradient(to left, rgb(218, 65, 27), rgb(222, 237, 13));
 }
 
@@ -21,49 +19,3 @@ body {
   margin: 5px auto;
 }
 
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  height: 100%;
-}
-
-.header {
-  height: 10%;
-  background-color: #b2d6ff;
-}
-
-.page {
-  height: 80%;
-  width: 100%;
-  /* margin: 0 auto; */
-  /* overflow: hidden; */
-  /* background-color: #eaedf0;
-}
-
-.left-content {
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: #f09a9d;
-}
-
-.user-input {
-  margin: 30px auto;
-}
-
-.right-content {
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: #f5cf8e;
-}
-
-.footer {
-  height: 10%;
-  /* clear: both; */
-  background-color: #d6e9fe;
-} */ */
