@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require("express")
 const app = express()
-const db = require("./db/conn")
+const db = require("../db/conn")
 
 const { Pool } = require("pg")
 
@@ -19,7 +19,7 @@ app.get("/list", (req, res) => {
   pool
     .query("SELECT * FROM todos ORDER BY id;")
     .then((result) => {
-      console.log(result.rows)
+      // console.log(result.rows)
       res.send(result.rows)
     })
     .catch(() => {
